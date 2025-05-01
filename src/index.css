@@ -20,5 +20,5 @@
 }
 
 a.active{
-  @apply bg-base-300 text-black;
+  @apply bg-base-300 text-black rounded-sm p-2;
 }

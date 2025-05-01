@@ -4,9 +4,9 @@ import Marquee from "react-fast-marquee";
 
 const LatestNews = () => {
   return (
-    <div className="flex items-center bg-base-200 p-4 my-7">
-      <p className="text-white px-4 py-3 bg-secondary">Latest</p>
-      <Marquee className="flex gap-5 text-red-400" pauseOnHover={true} speed={60}>
+    <div className="flex items-center bg-base-200 lg:gap-4 p-2 lg:p-4 my-7">
+      <p className="text-white px-4 py-1 lg:py-3 bg-secondary">Latest</p>
+      <Marquee className="flex gap-3 lg:gap-5 text-red-400" pauseOnHover={true} speed={60}>
         <p className="font-semibold ml-5">
          " India and Pakistan Edge Closer to Military Conflict Over Kashmir"
         </p>
