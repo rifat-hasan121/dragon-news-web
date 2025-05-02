@@ -21,7 +21,7 @@ const Register = () => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        alert(errorMessage)
+        alert(errorMessage, errorCode)
         // ..
       });
 
@@ -30,7 +30,7 @@ const Register = () => {
       <div className="flex justify-center items-center min-h-screen">
         <div className="card bg-base-100 w-full mt-12 max-w-sm shrink-0 shadow-2xl">
           <h2 className="text-2xl font-semibold text-center pt-10 pb-4">
-            Login your account
+            Sign In your account
           </h2>
           <hr className="border border-slate-200 w-11/12 mx-auto mt-5" />
           <form onSubmit={handleRegister} className="card-body">

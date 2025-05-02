@@ -3,10 +3,20 @@ import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 
 const Navbar = () => {
-  const { user } = use(AuthContext);
+  const { user, logOut } = use(AuthContext);
+  const handleLogOut = () => {
+    console.log('user trying to log out');
+    logOut()
+      .then(() => {
+        alert('You successfully log out')
+      })
+      .catch((error) => {
+        console.log(error)
+      });
+  }
     return (
       <div className="flex flex-col lg:flex lg:flex-row justify-between items-center">
-        <div className="empty">{user&&user.email}</div>
+        <div className="empty">{user && user.email}</div>
         <div className="nav lg:ml-48 space-x-4 text-accent">
           <NavLink to="/">Home</NavLink>
           <NavLink to="/about">About</NavLink>
@@ -14,7 +24,15 @@ const Navbar = () => {
         </div>
         <div className="hidden lg:flex items-center gap-3">
           <img src="https://i.ibb.co.com/gZT56VyZ/user.png" alt="user" />
-          <Link to='/auth/login' className="btn btn-primary px-10 text-white">Login</Link>
+          {user ? (
+            <button onClick={handleLogOut} className="btn btn-primary px-10 text-white">
+              Log Out
+            </button>
+          ) : (
+            <Link to="/auth/login" className="btn btn-primary px-10 text-white">
+              Login
+            </Link>
+          )}
         </div>
       </div>
     );

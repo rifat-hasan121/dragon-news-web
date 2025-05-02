@@ -2,6 +2,7 @@ import { FaStar } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 import { BsShareFill } from "react-icons/bs";
 import { HiOutlineBookmark } from "react-icons/hi2";
+import { Link } from "react-router";
 
 const NewsCard = ({ news }) => {
   const {
@@ -11,6 +12,7 @@ const NewsCard = ({ news }) => {
     details,
     rating,
     total_view,
+    id
     } = news;
     
     const publishedDate = new Date(news.author.published_date).toLocaleDateString();
@@ -53,9 +55,9 @@ const NewsCard = ({ news }) => {
         {details.length > 250 ? (
           <>
             {details.slice(0, 250)}...{" "}
-            <span className="text-orange-500 font-semibold cursor-pointer">
+            <Link to={`/news-details/${id}`} className="text-orange-500 font-semibold cursor-pointer">
               Read More
-            </span>
+            </Link>
           </>
         ) : (
           details
