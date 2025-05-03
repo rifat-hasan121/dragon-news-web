@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="p-6 max-w-3xl mx-auto">
+    <div data-aos="zoom-in" className="p-6 max-w-3xl mx-auto">
       <h1 className="text-3xl font-bold text-gray-800 mb-4">
         About The Dragon News
       </h1>

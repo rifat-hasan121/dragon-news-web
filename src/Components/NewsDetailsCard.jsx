@@ -13,7 +13,10 @@ const NewsDetailsCard = ({ news }) => {
         />
         <h2 className="font-bold text-2xl py-6">{news.title}</h2>
         <p className="text-accent">{news.details}</p>
-        <Link to="/" className="btn btn-secondary py-4 my-6">
+        <Link
+          to={`/category/${news.category_id}`}
+          className="btn btn-secondary py-4 my-6"
+        >
           {" "}
           <FaArrowLeftLong />
           All news in this category

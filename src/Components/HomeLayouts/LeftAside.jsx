@@ -3,7 +3,7 @@ import Categoris from './Categoris';
 
 const LeftAside = () => {
     return (
-      <div>
+      <div data-aos='fade-right'>
         <Suspense
           fallback={<span className="loading loading-dots loading-xl"></span>}
         >

@@ -18,7 +18,10 @@ const NewsCard = ({ news }) => {
     const publishedDate = new Date(news.author.published_date).toLocaleDateString();
 
   return (
-    <div className="bg-white shadow-md rounded-lg overflow-hidden">
+    <div
+      data-aos="zoom-out-up"
+      className="bg-white shadow-md rounded-lg overflow-hidden"
+    >
       {/* Header */}
       <div className="flex justify-between bg-base-200 items-center p-4 border-b border-slate-200">
         <div className="flex items-center gap-3">
@@ -55,7 +58,10 @@ const NewsCard = ({ news }) => {
         {details.length > 250 ? (
           <>
             {details.slice(0, 250)}...{" "}
-            <Link to={`/news-details/${id}`} className="text-orange-500 font-semibold cursor-pointer">
+            <Link
+              to={`/news-details/${id}`}
+              className="text-orange-500 font-semibold cursor-pointer"
+            >
               Read More
             </Link>
           </>
