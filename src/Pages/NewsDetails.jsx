@@ -26,8 +26,8 @@ const NewsDetails = () => {
           <Header></Header>
         </header>
         <main
-          data-aos="fade-up"
-          data-aos-duration="3000"
+          // data-aos="fade-up"
+          // data-aos-duration="3000"
           className="w-11/12 mx-auto grid grid-cols-12 gap-5 py-8"
         >
           <section className="col-span-9">
