@@ -2,8 +2,8 @@
 
 A modern news portal web app built with React and Firebase, featuring user authentication, dynamic routing, and category-based news browsing.
 
-🔗 **Live Site:** [your-live-link]  
-📁 **Client Repository:** [your-github-link]
+🔗 **Live Site:** [https://the-dragon-news-2c592.web.app/category/0]  
+
 
 ---
 
